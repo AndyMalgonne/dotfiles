@@ -1,13 +1,19 @@
 # dotfiles
 
-install config on new machines: 
+## install config on new machines:
 
-public machine:
-curl https://mise.run | sh
-mise use --global chezmoi@
-chezmoi init --apply https://github.com/AndyMalgonne/dotfiles.git
+### public machine
 
-private machine: 
-curl https://mise.run | sh
+```sh
+curl <https://mise.run> | sh
 mise use --global chezmoi@
-chezmoi init --apply git@github.com:AndyMalgonne/dotfiles.git
+chezmoi init --apply <https://github.com/AndyMalgonne/dotfiles.git>
+```
+
+### private machine
+
+```sh
+curl <https://mise.run> | sh
+mise use --global chezmoi@
+chezmoi init --apply <git@github.com>:AndyMalgonne/dotfiles.git
+```
